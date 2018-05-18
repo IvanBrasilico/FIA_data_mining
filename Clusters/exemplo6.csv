@@ -1,0 +1,21 @@
+rating;beer;origin;avail;price;cost;calories;sodium;alcohol;class;light
+VeryGood;BUDWEISER;USA;National;2,59;0,43;144;15;4,7;Premium;NONLIGHT
+VeryGood;SCHLITZ;USA;National;2,59;0,43;151;19;4,9;Premium;NONLIGHT
+VeryGood;LOWENBRAU;USA;National;2,89;0,48;157;15;4,9;Super-premium;NONLIGHT
+VeryGood;KRONENBOURG;France;Regional;4,39;0,73;170;7;5,2;Not given;NONLIGHT
+VeryGood;HEINEKEN;Holland;National;4,59;0,77;152;11;5;Not given;NONLIGHT
+Good;OLD MILWAUKEE;USA;Regional;1,69;0,28;145;23;4,6;Popular;NONLIGHT
+Good;AUGSBERGER;USA;Regional;2,39;0,4;175;24;5,5;Super-premium;NONLIGHT
+Good;STROHS BOHEMIAN STYLE;USA;Regional;2,49;0,42;149;27;4,7;Premium;NONLIGHT
+Good;MILLER LITE;USA;National;2,55;0,43;99;10;4,3;Not given;LIGHT
+Good;BUDWEISER LIGHT;USA;National;2,63;0,44;113;8;3,7;Not given;LIGHT
+Good;COORS;USA;Regional;2,65;0,44;140;18;4,6;Premium;NONLIGHT
+Good;COORS LIGHT;USA;Regional;2,73;0,46;102;15;4,1;Not given;LIGHT
+Good;MICHELOB LIGHT;USA;National;2,99;0,5;135;11;4,2;Not given;LIGHT
+Good;BECKS;Germany;Regional;4,55;0,76;150;19;4,7;Not given;NONLIGHT
+Good;KIRIN;Japan;Regional;4,75;0,79;149;6;5;Not given;NONLIGHT
+Fair;PABST EXTRA LIGHT;USA;National;2,29;0,38;68;15;2,3;Not given;LIGHT
+Fair;HAMMS;USA;Regional;2,59;0,43;136;19;4,4;Premium;NONLIGHT
+Fair;HEILEMANS OLD STYLE;USA;Regional;2,59;0,43;144;24;4,9;Premium;NONLIGHT
+Fair;OLYMPIA GOLD LIGHT;USA;Regional;2,75;0,46;72;6;2,9;Not given;LIGHT
+Fair;SCHLITZ LIGHT;USA;National;2,79;0,47;97;7;4,2;Not given;LIGHT
