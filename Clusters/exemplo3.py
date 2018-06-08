@@ -29,7 +29,7 @@ for method in ['ward', 'kmeans', 'AffinityPropagation']:
         if method == 'kmeans':
             model = KMeans(n_clusters=n_clusters)
         elif method == 'AffinityPropagation':
-            model = AffinityPropagation()
+            model = AffinityPropagation(damping= n_clusters / 16)
         else:
             model = AgglomerativeClustering(n_clusters=n_clusters, linkage=method)
         model.method = method
