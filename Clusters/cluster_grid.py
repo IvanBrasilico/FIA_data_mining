@@ -5,18 +5,18 @@ from sklearn.metrics.pairwise import paired_distances, euclidean_distances
 from sklearn.cluster import AgglomerativeClustering, KMeans
 
 
-def cluster_grid(X, 
+def cluster_grid(df, 
                 methods=['average', 'complete', 'ward', 'kmeans'],
                 n_clusters=[8, 9]):
     plot_index = 421
     for method in methods:
-        for n_clusters in [8, 9]:
+        for n_cluster in n_clusters:
             if method == 'kmeans':
-                model = KMeans(n_clusters=n_clusters)
+                model = KMeans(n_clusters=n_cluster)
             else:
-                model = AgglomerativeClustering(n_clusters=n_clusters, linkage=method)
+                model = AgglomerativeClustering(n_clusters=n_cluster, linkage=method)
             model.method = method
-            Y = model.fit_predict(X)
+            Y = model.fit_predict(df)
             # print(Y)
             df['cluster'] = Y
             # print(df)
@@ -26,8 +26,8 @@ def cluster_grid(X,
             cx = []
             cy = []
             for ocluster in set_clusters:
-                lx = df[df.cluster == ocluster].x.mean()
-                ly = df[df.cluster == ocluster].y.mean()
+                lx = df[df.cluster == ocluster][df.columns[0]].mean()
+                ly = df[df.cluster == ocluster][df.columns[1]].mean()
                 centroides[ocluster] = {
                     'x': lx,
                     'y': ly
@@ -38,7 +38,7 @@ def cluster_grid(X,
             # print(df)
             plt.subplot(plot_index)
             plot_index += 1
-            plt.scatter(x=df['x'], y=df['y'], c=df['cluster'])
+            plt.scatter(x=df[df.columns[0]], y=df[df.columns[1]], c=df['cluster'])
             plt.title(method + ' ' + str(n_clusters))
             plt.scatter(cx, cy, marker=(5, 2))
 

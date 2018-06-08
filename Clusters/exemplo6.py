@@ -12,7 +12,10 @@ df = pd.read_csv(
     'D:/Users/25052288840/Downloads/FIA_data_mining/Clusters/exemplo6.csv',
      header=0, sep=';', decimal=',')
 
-print(df)
-X = df[df.columns[0:7]]
 
-cluster_grid(X)
+X = df[['alcohol', 'calories', 'cost', 'sodium']]
+print(X['alcohol'])
+
+cluster_grid(X,
+              methods=['average', 'ward', 'kmeans'],
+              n_clusters=[2, 3, 4])
