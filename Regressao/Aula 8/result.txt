@@ -1,0 +1,68 @@
+[1] "CEOSAL1" "Graf"    "Mod01"  
+
+Call:
+lm(formula = salary ~ roe, data = CEOSAL1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1160.2  -526.0  -254.0   138.8 13499.9 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)   963.19     213.24   4.517 0.0000105 ***
+roe            18.50      11.12   1.663    0.0978 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1367 on 207 degrees of freedom
+Multiple R-squared:  0.01319,	Adjusted R-squared:  0.008421 
+F-statistic: 2.767 on 1 and 207 DF,  p-value: 0.09777
+
+  salary pcsalary   sales  roe pcroe ros indus finance consprod utility  lsalary
+1   1095       20 27595.0 14.1 106.4 191     1       0        0       0 6.998509
+2   1001       32  9958.0 10.9 -30.6  13     1       0        0       0 6.908755
+3   1122        9  6125.9 23.5 -16.3  14     1       0        0       0 7.022868
+4    578       -9 16246.0  5.9 -25.7 -21     1       0        0       0 6.359574
+5   1368        7 21783.2 13.8  -3.0  56     1       0        0       0 7.221105
+6   1145        5  6021.4 20.0   1.0  55     1       0        0       0 7.043160
+     lsales      fit       res
+1 10.225389 1224.058 -129.0581
+2  9.206132 1164.854 -163.8543
+3  8.720281 1397.969 -275.9692
+4  9.695602 1072.348 -494.3483
+5  9.988894 1218.508  149.4923
+6  8.703075 1333.215 -188.2151
+[1] "CEOSAL1" "Graf"    "Mod01"  
+
+Call:
+lm(formula = salary ~ roe, data = CEOSAL1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1160.2  -526.0  -254.0   138.8 13499.9 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)   963.19     213.24   4.517 0.0000105 ***
+roe            18.50      11.12   1.663    0.0978 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1367 on 207 degrees of freedom
+Multiple R-squared:  0.01319,	Adjusted R-squared:  0.008421 
+F-statistic: 2.767 on 1 and 207 DF,  p-value: 0.09777
+
+  salary pcsalary   sales  roe pcroe ros indus finance consprod utility  lsalary
+1   1095       20 27595.0 14.1 106.4 191     1       0        0       0 6.998509
+2   1001       32  9958.0 10.9 -30.6  13     1       0        0       0 6.908755
+3   1122        9  6125.9 23.5 -16.3  14     1       0        0       0 7.022868
+4    578       -9 16246.0  5.9 -25.7 -21     1       0        0       0 6.359574
+5   1368        7 21783.2 13.8  -3.0  56     1       0        0       0 7.221105
+6   1145        5  6021.4 20.0   1.0  55     1       0        0       0 7.043160
+     lsales      fit       res
+1 10.225389 1224.058 -129.0581
+2  9.206132 1164.854 -163.8543
+3  8.720281 1397.969 -275.9692
+4  9.695602 1072.348 -494.3483
+5  9.988894 1218.508  149.4923
+6  8.703075 1333.215 -188.2151

@@ -1,0 +1,400 @@
+ [1] "CEOSAL1"     "ENDIV1"      "Exemplo02"   "Exemplo03a"  "Exemplo03b" 
+ [6] "Exemplo04"   "Exemplo05"   "ExercicioA"  "ExercicioB1" "ExercicioB2"
+[11] "ExercicioB3" "ExercicioB4" "F1"          "Graf"        "MLB1"       
+[16] "SalMensal"   "twoyear"    
+   id sal man
+1   1   2   0
+2   2   3   0
+3   3   4   0
+4   4   4   0
+5   5   5   0
+6   6   5   0
+7   7   5   1
+8   8   6   1
+9   9   6   1
+10 10   7   1
+
+Call:
+lm(formula = sal ~ man, data = SalMensal)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.83333 -0.62500  0.08333  0.79167  1.16667 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)   3.8333     0.4290   8.936 0.0000195 ***
+man           2.1667     0.6783   3.194    0.0127 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.051 on 8 degrees of freedom
+Multiple R-squared:  0.5605,	Adjusted R-squared:  0.5056 
+F-statistic:  10.2 on 1 and 8 DF,  p-value: 0.01272
+
+[1] "CEOSAL1"
+
+Call:
+lm(formula = salary ~ roe, data = CEOSAL1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1160.2  -526.0  -254.0   138.8 13499.9 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)   963.19     213.24   4.517 0.0000105 ***
+roe            18.50      11.12   1.663    0.0978 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1367 on 207 degrees of freedom
+Multiple R-squared:  0.01319,	Adjusted R-squared:  0.008421 
+F-statistic: 2.767 on 1 and 207 DF,  p-value: 0.09777
+
+  salary pcsalary   sales  roe pcroe ros indus finance consprod utility
+1   1095       20 27595.0 14.1 106.4 191     1       0        0       0
+2   1001       32  9958.0 10.9 -30.6  13     1       0        0       0
+3   1122        9  6125.9 23.5 -16.3  14     1       0        0       0
+4    578       -9 16246.0  5.9 -25.7 -21     1       0        0       0
+5   1368        7 21783.2 13.8  -3.0  56     1       0        0       0
+6   1145        5  6021.4 20.0   1.0  55     1       0        0       0
+   lsalary    lsales      fit       res
+1 6.998509 10.225389 1224.058 -129.0581
+2 6.908755  9.206132 1164.854 -163.8543
+3 7.022868  8.720281 1397.969 -275.9692
+4 6.359574  9.695602 1072.348 -494.3483
+5 7.221105  9.988894 1218.508  149.4923
+6 7.043160  8.703075 1333.215 -188.2151
+[1] "CEOSAL1"   "Exemplo02" "F1"        "Graf"     
+[1] "position"   "points"     "rain_dummy" "rain_mm"    "training"  
+
+Call:
+lm(formula = points ~ rain_mm, data = F1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.7805 -2.8319 -0.6616  0.8168  8.9924 
+
+Coefficients:
+            Estimate Std. Error t value  Pr(>|t|)    
+(Intercept) 15.55352    2.03628   7.638 0.0000608 ***
+rain_mm      0.22703    0.09598   2.365    0.0456 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.757 on 8 degrees of freedom
+Multiple R-squared:  0.4115,	Adjusted R-squared:  0.338 
+F-statistic: 5.595 on 1 and 8 DF,  p-value: 0.04558
+
+
+Call:
+lm(formula = points ~ rain_mm + training, data = F1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2459 -0.4102  0.1119  1.1500  1.9472 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.65282    1.81437   2.564 0.037310 *  
+rain_mm     -0.03730    0.05460  -0.683 0.516538    
+training     0.54372    0.08122   6.694 0.000279 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.869 on 7 degrees of freedom
+Multiple R-squared:  0.9205,	Adjusted R-squared:  0.8978 
+F-statistic: 40.52 on 2 and 7 DF,  p-value: 0.0001417
+
+
+ Pearson correlations:
+         rain_mm training
+rain_mm   1.0000   0.7231
+training  0.7231   1.0000
+
+ Number of observations: 10 
+
+ Pairwise two-sided p-values:
+         rain_mm training
+rain_mm          0.0181  
+training 0.0181          
+
+ Adjusted p-values (Holm's method)
+         rain_mm training
+rain_mm          0.0181  
+training 0.0181          
+[1] "CEOSAL1"    "Exemplo02"  "Exemplo03a" "Exemplo03b" "F1"        
+[6] "Graf"       "twoyear"   
+ [1] "female"   "phsrank"  "BA"       "AA"       "black"    "hispanic"
+ [7] "id"       "exper"    "jc"       "univ"     "lwage"    "stotal"  
+[13] "smcity"   "medcity"  "submed"   "lgcity"   "sublg"    "vlgcity" 
+[19] "subvlg"   "ne"       "nc"       "south"    "totcoll" 
+
+Call:
+lm(formula = lwage ~ jc + univ + exper, data = twoyear)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.10362 -0.28132  0.00551  0.28518  1.78167 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.4723256  0.0210602  69.910   <2e-16 ***
+jc          0.0666967  0.0068288   9.767   <2e-16 ***
+univ        0.0768762  0.0023087  33.298   <2e-16 ***
+exper       0.0049442  0.0001575  31.397   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4301 on 6759 degrees of freedom
+Multiple R-squared:  0.2224,	Adjusted R-squared:  0.2221 
+F-statistic: 644.5 on 3 and 6759 DF,  p-value: < 2.2e-16
+
+Linear hypothesis test
+
+Hypothesis:
+jc - univ = 0
+
+Model 1: restricted model
+Model 2: lwage ~ jc + univ + exper
+
+  Res.Df    RSS Df Sum of Sq     F Pr(>F)
+1   6760 1250.9                          
+2   6759 1250.5  1   0.39853 2.154 0.1422
+[1] "CEOSAL1"    "Exemplo02"  "Exemplo03a" "Exemplo03b" "Exemplo04" 
+[6] "F1"         "Graf"       "MLB1"       "twoyear"   
+ [1] "salary"   "teamsal"  "nl"       "years"    "games"    "atbats"  
+ [7] "runs"     "hits"     "doubles"  "triples"  "hruns"    "rbis"    
+[13] "bavg"     "bb"       "so"       "sbases"   "fldperc"  "frstbase"
+[19] "scndbase" "shrtstop" "thrdbase" "outfield" "catcher"  "yrsallst"
+[25] "hispan"   "black"    "whitepop" "blackpop" "hisppop"  "pcinc"   
+[31] "gamesyr"  "hrunsyr"  "atbatsyr" "allstar"  "slugavg"  "rbisyr"  
+[37] "sbasesyr" "runsyr"   "percwhte" "percblck" "perchisp" "blckpb"  
+[43] "hispph"   "whtepw"   "blckph"   "hisppb"   "lsalary" 
+
+Call:
+lm(formula = lsalary ~ years + gamesyr + bavg + hrunsyr + rbisyr, 
+    data = MLB1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-3.02508 -0.45034 -0.04013  0.47014  2.68924 
+
+Coefficients:
+              Estimate Std. Error t value     Pr(>|t|)    
+(Intercept) 11.1924180  0.2888229  38.752      < 2e-16 ***
+years        0.0688626  0.0121145   5.684 0.0000000279 ***
+gamesyr      0.0125521  0.0026468   4.742 0.0000030886 ***
+bavg         0.0009786  0.0011035   0.887        0.376    
+hrunsyr      0.0144295  0.0160570   0.899        0.369    
+rbisyr       0.0107657  0.0071750   1.500        0.134    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7266 on 347 degrees of freedom
+Multiple R-squared:  0.6278,	Adjusted R-squared:  0.6224 
+F-statistic: 117.1 on 5 and 347 DF,  p-value: < 2.2e-16
+
+Linear hypothesis test
+
+Hypothesis:
+bavg  + hrunsyr  + rbisyr = 0
+
+Model 1: restricted model
+Model 2: lsalary ~ years + gamesyr + bavg + hrunsyr + rbisyr
+
+  Res.Df    RSS Df Sum of Sq      F  Pr(>F)  
+1    348 186.50                              
+2    347 183.19  1    3.3149 6.2793 0.01267 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+ [1] "CEOSAL1"    "Exemplo02"  "Exemplo03a" "Exemplo03b" "Exemplo04" 
+ [6] "Exemplo05"  "F1"         "Graf"       "MLB1"       "twoyear"   
+ [1] "salary"   "pcsalary" "sales"    "roe"      "pcroe"    "ros"     
+ [7] "indus"    "finance"  "consprod" "utility"  "lsalary"  "lsales"  
+
+Call:
+lm(formula = lsalary ~ lsales + roe + finance + consprod + utility, 
+    data = CEOSAL1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.09465 -0.22173 -0.01973  0.17141  2.64394 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.58810    0.29502  15.552  < 2e-16 ***
+lsales       0.25719    0.03204   8.029 7.85e-14 ***
+roe          0.01115    0.00430   2.594   0.0102 *  
+finance      0.15796    0.08900   1.775   0.0774 .  
+consprod     0.18089    0.08477   2.134   0.0340 *  
+utility     -0.28300    0.09923  -2.852   0.0048 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4598 on 203 degrees of freedom
+Multiple R-squared:  0.3569,	Adjusted R-squared:  0.341 
+F-statistic: 22.53 on 5 and 203 DF,  p-value: < 2.2e-16
+
+  salary pcsalary   sales  roe pcroe ros indus finance consprod utility
+1   1095       20 27595.0 14.1 106.4 191     1       0        0       0
+2   1001       32  9958.0 10.9 -30.6  13     1       0        0       0
+3   1122        9  6125.9 23.5 -16.3  14     1       0        0       0
+4    578       -9 16246.0  5.9 -25.7 -21     1       0        0       0
+5   1368        7 21783.2 13.8  -3.0  56     1       0        0       0
+6   1145        5  6021.4 20.0   1.0  55     1       0        0       0
+   lsalary    lsales   fitExA       resExA
+1 6.998509 10.225389 7.375226 -0.376716572
+2 6.908755  9.206132 7.077396 -0.168640929
+3 7.022868  8.720281 7.092951 -0.070082683
+4 6.359574  9.695602 7.147525 -0.787950947
+5 7.221105  9.988894 7.311056 -0.089950788
+6 7.043160  8.703075 7.049495 -0.006334716
+Linear hypothesis test
+
+Hypothesis:
+finance - consprod = 0
+
+Model 1: restricted model
+Model 2: lsalary ~ lsales + roe + finance + consprod + utility
+
+  Res.Df    RSS Df Sum of Sq      F Pr(>F)
+1    204 42.923                           
+2    203 42.911  1  0.011862 0.0561  0.813
+ [1] "CEOSAL1"    "ENDIV1"     "Exemplo02"  "Exemplo03a" "Exemplo03b"
+ [6] "Exemplo04"  "Exemplo05"  "ExercicioA" "F1"         "Graf"      
+[11] "MLB1"       "twoyear"   
+ [1] "idemp"   "nome"    "status"  "ano"     "setor"   "endiv1"  "tang1"  
+ [8] "risco"   "lntam"   "z1"      "mb"      "roa"     "lucrat2" "higrow" 
+  idemp                                     nome status  ano            setor
+1   184                               Light S.A.  ativo 2007 Energia Elétrica
+2   439                              Cobrasma SA  ativo 2007 Veiculos e peças
+3   105                    Const Lix da Cunha SA  ativo 2007       Construção
+4   411                           Vulcabras S/A.  ativo 2007           Textil
+5   262                        M&g Poliester S/A  ativo 2007          Química
+6     2 Brasilagro Cia Bras Propriedades Agricol  ativo 2007     Agro e Pesca
+       endiv1       tang1       risco     lntam         z1         mb
+1 0.000000000 0.000000000 0.027042995  8.853665         NA  2.0289322
+2 0.979156474 0.901510940 0.631565824 10.645425 -23.795409 62.1762595
+3 0.104942917 0.006613487 0.006767474 11.877569   4.797722  0.1757538
+4 0.000000000 0.018984032 0.324144983 11.891362         NA  5.0255400
+5 0.000000000 0.005003175 0.000547450 12.180755         NA  3.6009217
+6 0.001678042 0.054354893          NA 12.206073 357.783121  0.9805731
+           roa     lucrat2 higrow
+1 -0.001873276 -768.857143      1
+2 -0.513062813 -241.738095      1
+3 -0.012658228  -24.111111      0
+4 -0.003366448   -5.732877      1
+5 -0.001368581   -3.128205      1
+6 -0.025375335  -75.720000      0
+     endiv1             roa                 mb              lntam       
+ Min.   :0.00000   Min.   :-0.51306   Min.   : 0.1757   Min.   : 8.854  
+ 1st Qu.:0.04025   1st Qu.:-0.01098   1st Qu.: 0.9817   1st Qu.:17.930  
+ Median :0.15003   Median : 0.04238   Median : 1.4186   Median :19.543  
+ Mean   :0.19213   Mean   : 0.05352   Mean   : 2.3055   Mean   :19.297  
+ 3rd Qu.:0.26022   3rd Qu.: 0.11758   3rd Qu.: 2.0139   3rd Qu.:21.167  
+ Max.   :0.97916   Max.   : 0.41178   Max.   :62.6953   Max.   :25.566  
+
+ Pearson correlations:
+        endiv1     roa      mb   lntam
+endiv1  1.0000 -0.2191  0.2883 -0.0933
+roa    -0.2191  1.0000 -0.0671  0.4613
+mb      0.2883 -0.0671  1.0000 -0.2353
+lntam  -0.0933  0.4613 -0.2353  1.0000
+
+ Number of observations: 186 
+
+ Pairwise two-sided p-values:
+       endiv1 roa    mb     lntam 
+endiv1        0.0027 <.0001 0.2054
+roa    0.0027        0.3630 <.0001
+mb     <.0001 0.3630        0.0012
+lntam  0.2054 <.0001 0.0012       
+
+ Adjusted p-values (Holm's method)
+       endiv1 roa    mb     lntam 
+endiv1        0.0080 0.0003 0.4108
+roa    0.0080        0.4108 <.0001
+mb     0.0003 0.4108        0.0049
+lntam  0.4108 <.0001 0.0049       
+
+Call:
+lm(formula = endiv1 ~ roa, data = ENDIV1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27801 -0.14302 -0.04038  0.09151  0.81176 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.21346    0.01608  13.276  < 2e-16 ***
+roa         -0.39866    0.13089  -3.046  0.00266 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1974 on 184 degrees of freedom
+Multiple R-squared:  0.048,	Adjusted R-squared:  0.04282 
+F-statistic: 9.277 on 1 and 184 DF,  p-value: 0.002661
+
+
+Call:
+lm(formula = endiv1 ~ roa + mb + lntam, data = ENDIV1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27438 -0.14478 -0.03740  0.09008  0.81726 
+
+Coefficients:
+             Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)  0.069651   0.115109   0.605   0.54588    
+roa         -0.434995   0.142067  -3.062   0.00253 ** 
+mb           0.009242   0.002252   4.104 0.0000613 ***
+lntam        0.006449   0.006023   1.071   0.28571    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1899 on 182 degrees of freedom
+Multiple R-squared:  0.1287,	Adjusted R-squared:  0.1143 
+F-statistic: 8.961 on 3 and 182 DF,  p-value: 0.00001442
+
+
+Call:
+lm(formula = mb ~ lucrat2, data = ENDIV1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-16.825  -1.198  -0.770  -0.198  60.526 
+
+Coefficients:
+             Estimate Std. Error t value   Pr(>|t|)    
+(Intercept)  2.173498   0.462206   4.702 0.00000503 ***
+lucrat2     -0.021696   0.007776  -2.790    0.00582 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 6.271 on 184 degrees of freedom
+Multiple R-squared:  0.04059,	Adjusted R-squared:  0.03538 
+F-statistic: 7.785 on 1 and 184 DF,  p-value: 0.005824
+
+
+Call:
+lm(formula = mb ~ lucrat2 + endiv1 + lntam, data = ENDIV1)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-14.139  -1.715  -0.311   1.155  54.078 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  7.743075   3.523786   2.197 0.029256 *  
+lucrat2     -0.015249   0.007971  -1.913 0.057301 .  
+endiv1       8.644036   2.180861   3.964 0.000106 ***
+lntam       -0.372657   0.176800  -2.108 0.036418 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 5.955 on 182 degrees of freedom
+Multiple R-squared:  0.1442,	Adjusted R-squared:   0.13 
+F-statistic: 10.22 on 3 and 182 DF,  p-value: 0.000002982
+
