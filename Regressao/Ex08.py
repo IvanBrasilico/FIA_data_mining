@@ -14,8 +14,9 @@ X = df[['lotsize', 'sqrft', 'bdrms']]
 y = df['price']
 
 X2 = sm.add_constant(X)
+# model = sm.RLM(y, X2,  M=sm.robust.norms.HuberT())
 model = sm.OLS(y, X2)
-results = model.fit()
+results = model.fit(cov_type='HC0')
 # Statsmodels gives R-like statistical output
 print(results.summary())
 
