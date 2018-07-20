@@ -1,5 +1,6 @@
 setwd("D:/Users/25052288840/Downloads/FIA_data_mining/Regressao/")
 load("Aula 10/WAGEPAN.rda")
+
 WAGEPANEL = pdata.frame(WAGEPAN, index=c("nr", "year"))
 
 Ex22 <- plm(formula = lwage~educ+black+hisp+exper+expersq+married+union+

@@ -1,0 +1,384 @@
+character(0)
+ [1] "firmid"    "year"      "sic"       "ttasset"   "mktval"    "ppe"       "debt"      "sales"    
+ [9] "cashflow3" "capex"     "invest"    "tobinq"    "cashfl"    "tang"      "size"      "cash_tang"
+     invest            tobinq          cashfl             tang             size       
+ Min.   : 0.0000   Min.   :0.182   Min.   :   -Inf   Min.   :0.0000   Min.   :  -Inf  
+ 1st Qu.: 0.0096   1st Qu.:1.859   1st Qu.:-0.5765   1st Qu.:0.0326   1st Qu.: 2.301  
+ Median : 0.0235   Median :3.029   Median :-0.1992   Median :0.1107   Median : 3.933  
+ Mean   : 0.0646   Mean   :  Inf   Mean   :    NaN   Mean   :0.1718   Mean   :  -Inf  
+ 3rd Qu.: 0.0461   3rd Qu.:5.485   3rd Qu.: 0.0709   3rd Qu.:0.2636   3rd Qu.: 5.897  
+ Max.   :52.1868   Max.   :  Inf   Max.   :    Inf   Max.   :0.9913   Max.   :11.835  
+ NA's   :1481      NA's   :1617    NA's   :1692      NA's   :1113     NA's   :1098    
+     invest             tobinq          cashfl              tang              size       
+ Min.   : 0.00003   Min.   :0.182   Min.   :-10.4251   Min.   :0.00000   Min.   :-3.037  
+ 1st Qu.: 0.00947   1st Qu.:1.753   1st Qu.: -0.4222   1st Qu.:0.03565   1st Qu.: 2.830  
+ Median : 0.02284   Median :2.690   Median : -0.1317   Median :0.11746   Median : 4.236  
+ Mean   : 0.05719   Mean   :3.300   Mean   : -0.2537   Mean   :0.17452   Mean   : 4.597  
+ 3rd Qu.: 0.04422   3rd Qu.:4.314   3rd Qu.:  0.0915   3rd Qu.:0.26620   3rd Qu.: 6.141  
+ Max.   :52.18676   Max.   :9.973   Max.   :  0.9794   Max.   :0.98297   Max.   :11.835  
+ NA's   :186                        NA's   :488        NA's   :2                         
+
+Call:
+lm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.2934 -0.0273 -0.0137  0.0015  4.6729 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       9.262e-03  1.071e-02   0.865  0.38733    
+tobinq            3.741e-05  8.543e-05   0.438  0.66149    
+cashfl           -1.648e-02  4.046e-03  -4.073 4.78e-05 ***
+tang              1.699e-01  2.077e-02   8.180 4.32e-16 ***
+cash_tang         2.516e-02  9.084e-03   2.770  0.00564 ** 
+factor(year)2002 -6.711e-03  1.406e-02  -0.477  0.63328    
+factor(year)2003  4.042e-03  1.384e-02   0.292  0.77021    
+factor(year)2004  2.728e-03  1.354e-02   0.201  0.84039    
+factor(year)2005 -5.005e-04  1.344e-02  -0.037  0.97029    
+factor(year)2006  1.270e-02  1.313e-02   0.968  0.33337    
+factor(year)2007  5.437e-03  1.304e-02   0.417  0.67677    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1789 on 2677 degrees of freedom
+  (2450 observations deleted due to missingness)
+Multiple R-squared:  0.03054,	Adjusted R-squared:  0.02692 
+F-statistic: 8.434 on 10 and 2677 DF,  p-value: 1.2e-13
+
+
+Call:
+lm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.2934 -0.0273 -0.0137  0.0015  4.6729 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       9.262e-03  1.071e-02   0.865  0.38733    
+tobinq            3.741e-05  8.543e-05   0.438  0.66149    
+cashfl           -1.648e-02  4.046e-03  -4.073 4.78e-05 ***
+tang              1.699e-01  2.077e-02   8.180 4.32e-16 ***
+cash_tang         2.516e-02  9.084e-03   2.770  0.00564 ** 
+factor(year)2002 -6.711e-03  1.406e-02  -0.477  0.63328    
+factor(year)2003  4.042e-03  1.384e-02   0.292  0.77021    
+factor(year)2004  2.728e-03  1.354e-02   0.201  0.84039    
+factor(year)2005 -5.005e-04  1.344e-02  -0.037  0.97029    
+factor(year)2006  1.270e-02  1.313e-02   0.968  0.33337    
+factor(year)2007  5.437e-03  1.304e-02   0.417  0.67677    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1789 on 2677 degrees of freedom
+  (2450 observations deleted due to missingness)
+Multiple R-squared:  0.03054,	Adjusted R-squared:  0.02692 
+F-statistic: 8.434 on 10 and 2677 DF,  p-value: 1.2e-13
+
+
+Call:
+lm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.15970 -0.01742 -0.00541  0.00619  0.96594 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       0.0008621  0.0036649   0.235   0.8141    
+tobinq            0.0037966  0.0005342   7.107 1.55e-12 ***
+cashfl            0.0056362  0.0027414   2.056   0.0399 *  
+tang              0.1520523  0.0064163  23.698  < 2e-16 ***
+cash_tang        -0.0252334  0.0103857  -2.430   0.0152 *  
+factor(year)2002 -0.0016008  0.0041487  -0.386   0.6996    
+factor(year)2003 -0.0085675  0.0040912  -2.094   0.0364 *  
+factor(year)2004 -0.0056054  0.0039899  -1.405   0.1602    
+factor(year)2005 -0.0012121  0.0039343  -0.308   0.7580    
+factor(year)2006 -0.0034195  0.0038716  -0.883   0.3772    
+factor(year)2007  0.0063400  0.0038345   1.653   0.0984 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.04996 on 2434 degrees of freedom
+  (659 observations deleted due to missingness)
+Multiple R-squared:  0.2305,	Adjusted R-squared:  0.2273 
+F-statistic: 72.89 on 10 and 2434 DF,  p-value: < 2.2e-16
+
+
+	studentized Breusch-Pagan test
+
+data:  MQ2
+BP = 78.518, df = 10, p-value = 9.794e-13
+
+
+An?lise de regress?o por MQO
+===========================================================================================================
+                                                           Dependent variable:                             
+                               ----------------------------------------------------------------------------
+                                                               Investimento                                
+                                  MQO amostra total        MQO amostra parcial         Erros robustos      
+                                         (1)                       (2)                       (3)           
+-----------------------------------------------------------------------------------------------------------
+Q de Tobin                             0.00004                  0.004***                  0.004***         
+                                       (0.0001)                  (0.001)                   (0.001)         
+                                                                                                           
+Fluxo de Caixa                        -0.016***                  0.006*                    0.006**         
+                                       (0.004)                   (0.003)                   (0.003)         
+                                                                                                           
+Tangibilidade                          0.170***                 0.152***                  0.152***         
+                                       (0.021)                   (0.013)                   (0.006)         
+                                                                                                           
+Fluxo de caixa x Tangibilidade         0.025***                  -0.025                   -0.025**         
+                                       (0.009)                   (0.021)                   (0.010)         
+                                                                                                           
+factor(year)2002                        -0.007                   -0.002                    -0.002          
+                                       (0.014)                   (0.004)                   (0.004)         
+                                                                                                           
+factor(year)2003                        0.004                   -0.009***                 -0.009**         
+                                       (0.014)                   (0.003)                   (0.004)         
+                                                                                                           
+factor(year)2004                        0.003                    -0.006                    -0.006          
+                                       (0.014)                   (0.003)                   (0.004)         
+                                                                                                           
+factor(year)2005                        -0.001                   -0.001                    -0.001          
+                                       (0.013)                   (0.004)                   (0.004)         
+                                                                                                           
+factor(year)2006                        0.013                    -0.003                    -0.003          
+                                       (0.013)                   (0.003)                   (0.004)         
+                                                                                                           
+factor(year)2007                        0.005                     0.006                    0.006*          
+                                       (0.013)                   (0.004)                   (0.004)         
+                                                                                                           
+Constant                                0.009                     0.001                     0.001          
+                                       (0.011)                   (0.004)                   (0.004)         
+                                                                                                           
+-----------------------------------------------------------------------------------------------------------
+Observations                            2,688                     2,445                     2,445          
+R2                                      0.031                     0.230                     0.230          
+Adjusted R2                             0.027                     0.227                     0.227          
+Residual Std. Error               0.179 (df = 2677)         0.050 (df = 2434)         0.050 (df = 2434)    
+F Statistic                    8.434*** (df = 10; 2677) 72.893*** (df = 10; 2434) 72.893*** (df = 10; 2434)
+===========================================================================================================
+Note:                                                                           *p<0.1; **p<0.05; ***p<0.01
+Pooling Model
+
+Call:
+plm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST2PANEL, model = "pooling")
+
+Unbalanced Panel: n = 564, T = 1-7, N = 2445
+
+Residuals:
+      Min.    1st Qu.     Median    3rd Qu.       Max. 
+-0.1596970 -0.0174181 -0.0054116  0.0061886  0.9659396 
+
+Coefficients:
+                    Estimate  Std. Error t-value  Pr(>|t|)    
+(Intercept)       0.00086207  0.00366490  0.2352   0.81406    
+tobinq            0.00379663  0.00053418  7.1074 1.547e-12 ***
+cashfl            0.00563623  0.00274136  2.0560   0.03989 *  
+tang              0.15205226  0.00641626 23.6979 < 2.2e-16 ***
+cash_tang        -0.02523344  0.01038574 -2.4296   0.01519 *  
+factor(year)2002 -0.00160083  0.00414874 -0.3859   0.69964    
+factor(year)2003 -0.00856752  0.00409119 -2.0941   0.03635 *  
+factor(year)2004 -0.00560537  0.00398986 -1.4049   0.16018    
+factor(year)2005 -0.00121212  0.00393428 -0.3081   0.75804    
+factor(year)2006 -0.00341953  0.00387161 -0.8832   0.37720    
+factor(year)2007  0.00634000  0.00383446  1.6534   0.09837 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    7.894
+Residual Sum of Squares: 6.0747
+R-Squared:      0.23046
+Adj. R-Squared: 0.2273
+F-statistic: 72.8933 on 10 and 2434 DF, p-value: < 2.22e-16
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST2PANEL, model = "random")
+
+Unbalanced Panel: n = 564, T = 1-7, N = 2445
+
+Effects:
+                   var  std.dev share
+idiosyncratic 0.001363 0.036914 0.562
+individual    0.001064 0.032618 0.438
+theta:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.2506  0.5075  0.5806  0.5458  0.6067  0.6067 
+
+Residuals:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.15840 -0.01402 -0.00369 -0.00081  0.00494  0.72796 
+
+Coefficients:
+                    Estimate  Std. Error t-value  Pr(>|t|)    
+(Intercept)       0.00145352  0.00388653  0.3740   0.70844    
+tobinq            0.00273601  0.00055857  4.8983  1.03e-06 ***
+cashfl            0.00215426  0.00284432  0.7574   0.44889    
+tang              0.18904955  0.00859404 21.9977 < 2.2e-16 ***
+cash_tang        -0.00744788  0.01053043 -0.7073   0.47947    
+factor(year)2002 -0.00143582  0.00342307 -0.4195   0.67492    
+factor(year)2003 -0.00705678  0.00338795 -2.0829   0.03736 *  
+factor(year)2004 -0.00453126  0.00331829 -1.3655   0.17221    
+factor(year)2005 -0.00151752  0.00329999 -0.4599   0.64566    
+factor(year)2006 -0.00486008  0.00327383 -1.4845   0.13780    
+factor(year)2007  0.00296868  0.00327559  0.9063   0.36487    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    5.0329
+Residual Sum of Squares: 3.9559
+R-Squared:      0.21456
+Adj. R-Squared: 0.21134
+F-statistic: 66.265 on 10 and 2434 DF, p-value: < 2.22e-16
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = invest ~ tobinq + cashfl + tang + cash_tang + factor(year), 
+    data = INVEST2PANEL, model = "within")
+
+Unbalanced Panel: n = 564, T = 1-7, N = 2445
+
+Residuals:
+       Min.     1st Qu.      Median     3rd Qu.        Max. 
+-0.20858263 -0.00917651 -0.00069595  0.00696661  0.32555874 
+
+Coefficients:
+                    Estimate  Std. Error t-value  Pr(>|t|)    
+tobinq            0.00174879  0.00058287  3.0003  0.002733 ** 
+cashfl            0.00236152  0.00299744  0.7878  0.430887    
+tang              0.23295974  0.01183668 19.6812 < 2.2e-16 ***
+cash_tang         0.00972734  0.01118260  0.8699  0.384486    
+factor(year)2002 -0.00136380  0.00318506 -0.4282  0.668564    
+factor(year)2003 -0.00596179  0.00315031 -1.8924  0.058586 .  
+factor(year)2004 -0.00363253  0.00309387 -1.1741  0.240503    
+factor(year)2005 -0.00110110  0.00309512 -0.3558  0.722065    
+factor(year)2006 -0.00530320  0.00308920 -1.7167  0.086201 .  
+factor(year)2007  0.00013349  0.00312983  0.0427  0.965984    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    3.1867
+Residual Sum of Squares: 2.5495
+R-Squared:      0.19996
+Adj. R-Squared: -0.045057
+F-statistic: 46.7628 on 10 and 1871 DF, p-value: < 2.22e-16
+
+	Lagrange Multiplier Test - (Breusch-Pagan) for unbalanced panels
+
+data:  invest ~ tobinq + cashfl + tang + cash_tang + factor(year)
+chisq = 90.406, df = 1, p-value < 2.2e-16
+alternative hypothesis: significant effects
+
+
+	Hausman Test
+
+data:  invest ~ tobinq + cashfl + tang + cash_tang + factor(year)
+chisq = 45.911, df = 10, p-value = 1.488e-06
+alternative hypothesis: one model is inconsistent
+
+
+An?lises de dados agrupados, efeitos aleat?rios e efeitos fixos
+============================================================================================================
+                                                            Dependent variable:                             
+                               -----------------------------------------------------------------------------
+                                                               Investimento                                 
+                                         POLS               Efeitos Aleat?rios           Efeitos Fixos      
+                                          (1)                       (2)                       (3)           
+------------------------------------------------------------------------------------------------------------
+Q de Tobin                             0.004***                  0.003***                  0.002***         
+                                        (0.001)                   (0.001)                   (0.001)         
+                                                                                                            
+Fluxo de Caixa                          0.006**                    0.002                     0.002          
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+Tangibilidade                          0.152***                  0.189***                  0.233***         
+                                        (0.006)                   (0.009)                   (0.012)         
+                                                                                                            
+Fluxo de caixa x Tangibilidade         -0.025**                   -0.007                     0.010          
+                                        (0.010)                   (0.011)                   (0.011)         
+                                                                                                            
+factor(year)2002                        -0.002                    -0.001                    -0.001          
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2003                       -0.009**                  -0.007**                   -0.006*         
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2004                        -0.006                    -0.005                    -0.004          
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2005                        -0.001                    -0.002                    -0.001          
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2006                        -0.003                    -0.005                    -0.005*         
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2007                        0.006*                     0.003                    0.0001          
+                                        (0.004)                   (0.003)                   (0.003)         
+                                                                                                            
+Constant                                 0.001                     0.001                                    
+                                        (0.004)                   (0.004)                                   
+                                                                                                            
+------------------------------------------------------------------------------------------------------------
+Observations                             2,445                     2,445                     2,445          
+R2                                       0.230                     0.215                     0.200          
+Adjusted R2                              0.227                     0.211                    -0.045          
+F Statistic                    72.893*** (df = 10; 2434) 66.265*** (df = 10; 2434) 46.763*** (df = 10; 1871)
+============================================================================================================
+Note:                                                                            *p<0.1; **p<0.05; ***p<0.01
+
+An?lises de dados agrupados, efeitos aleat?rios e efeitos fixos com erros robustos ? heteroscedasticidade
+============================================================================================================
+                                                            Dependent variable:                             
+                               -----------------------------------------------------------------------------
+                                                               Investimento                                 
+                                         POLS               Efeitos Aleat?rios           Efeitos Fixos      
+                                          (1)                       (2)                       (3)           
+------------------------------------------------------------------------------------------------------------
+Q de Tobin                             0.004***                  0.003***                   0.002**         
+                                        (0.001)                   (0.001)                   (0.001)         
+                                                                                                            
+Fluxo de Caixa                          0.006**                    0.002                     0.002          
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+Tangibilidade                          0.152***                  0.189***                  0.233***         
+                                        (0.017)                   (0.022)                   (0.034)         
+                                                                                                            
+Fluxo de caixa x Tangibilidade          -0.025                    -0.007                     0.010          
+                                        (0.019)                   (0.021)                   (0.027)         
+                                                                                                            
+factor(year)2002                        -0.002                    -0.001                    -0.001          
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2003                       -0.009***                 -0.007**                  -0.006**         
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2004                        -0.006*                   -0.005                    -0.004          
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2005                        -0.001                    -0.002                    -0.001          
+                                        (0.004)                   (0.004)                   (0.004)         
+                                                                                                            
+factor(year)2006                        -0.003                    -0.005*                   -0.005*         
+                                        (0.003)                   (0.003)                   (0.003)         
+                                                                                                            
+factor(year)2007                         0.006                     0.003                    0.0001          
+                                        (0.004)                   (0.004)                   (0.003)         
+                                                                                                            
+Constant                                 0.001                     0.001                                    
+                                        (0.004)                   (0.005)                                   
+                                                                                                            
+------------------------------------------------------------------------------------------------------------
+Observations                             2,445                     2,445                     2,445          
+R2                                       0.230                     0.215                     0.200          
+Adjusted R2                              0.227                     0.211                    -0.045          
+F Statistic                    72.893*** (df = 10; 2434) 66.265*** (df = 10; 2434) 46.763*** (df = 10; 1871)
+============================================================================================================
+Note:                                                                            *p<0.1; **p<0.05; ***p<0.01
