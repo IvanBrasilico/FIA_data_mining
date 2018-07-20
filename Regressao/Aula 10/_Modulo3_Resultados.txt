@@ -1,0 +1,460 @@
+character(0)
+[1] "CRIME2"
+ [1] "pop"      "crimes"   "unem"     "officers" "pcinc"    "west"     "nrtheast" "south"    "year"     "area"    
+[11] "d87"      "popden"   "crmrte"   "offarea"  "lawexpc"  "polpc"    "lpop"     "loffic"   "lpcinc"   "llawexpc"
+[21] "lpopden"  "lcrimes"  "larea"    "lcrmrte"  "clcrimes" "clpop"    "clcrmrte" "lpolpc"   "clpolpc"  "cllawexp"
+[31] "cunem"    "clpopden" "lcrmrt_1" "ccrmrte" 
+
+Call:
+lm(formula = crmrte ~ unem, data = subset(CRIME2, year == 87))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-57.55 -27.01 -10.56  18.01  79.75 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  128.378     20.757   6.185  1.8e-07 ***
+unem          -4.161      3.416  -1.218     0.23    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 34.6 on 44 degrees of freedom
+Multiple R-squared:  0.03262,	Adjusted R-squared:  0.01063 
+F-statistic: 1.483 on 1 and 44 DF,  p-value: 0.2297
+
+
+Call:
+lm(formula = crmrte ~ d87 + unem, data = CRIME2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-53.474 -21.794  -6.266  18.297  75.113 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  93.4202    12.7395   7.333 9.92e-11 ***
+d87           7.9404     7.9753   0.996    0.322    
+unem          0.4265     1.1883   0.359    0.720    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 29.99 on 89 degrees of freedom
+Multiple R-squared:  0.01221,	Adjusted R-squared:  -0.009986 
+F-statistic: 0.5501 on 2 and 89 DF,  p-value: 0.5788
+
+Pooling Model
+
+Call:
+plm(formula = crmrte ~ d87 + unem, data = CRIME2PANEL, model = "pooling")
+
+Balanced Panel: n = 46, T = 2, N = 92
+
+Residuals:
+    Min.  1st Qu.   Median  3rd Qu.     Max. 
+-53.4742 -21.7943  -6.2656  18.2970  75.1135 
+
+Coefficients:
+            Estimate Std. Error t-value  Pr(>|t|)    
+(Intercept) 93.42025   12.73947  7.3331 9.916e-11 ***
+d87          7.94042    7.97533  0.9956    0.3221    
+unem         0.42655    1.18828  0.3590    0.7205    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    81046
+Residual Sum of Squares: 80056
+R-Squared:      0.012212
+Adj. R-Squared: -0.0099856
+F-statistic: 0.550146 on 2 and 89 DF, p-value: 0.57881
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = crmrte ~ d87 + unem, data = CRIME2PANEL, model = "within")
+
+Balanced Panel: n = 46, T = 2, N = 92
+
+Residuals:
+   Min. 1st Qu.  Median 3rd Qu.    Max. 
+-26.458  -6.384   0.000   6.384  26.458 
+
+Coefficients:
+     Estimate Std. Error t-value Pr(>|t|)   
+d87  15.40220    4.70212  3.2756  0.00206 **
+unem  2.21800    0.87787  2.5266  0.01519 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    11002
+Residual Sum of Squares: 8844.8
+R-Squared:      0.19606
+Adj. R-Squared: -0.66269
+F-statistic: 5.36528 on 2 and 44 DF, p-value: 0.0082206
+[1] "CRIME2"      "CRIME2PANEL" "Exemplo17"   "Exemplo18"   "Exemplo18B"  "Exemplo19"   "WAGEPAN"    
+ [1] "nr"       "year"     "agric"    "black"    "bus"      "construc" "ent"      "exper"    "fin"      "hisp"    
+[11] "poorhlth" "hours"    "manuf"    "married"  "min"      "nrthcen"  "nrtheast" "occ1"     "occ2"     "occ3"    
+[21] "occ4"     "occ5"     "occ6"     "occ7"     "occ8"     "occ9"     "per"      "pro"      "pub"      "rur"     
+[31] "south"    "educ"     "tra"      "trad"     "union"    "lwage"    "d81"      "d82"      "d83"      "d84"     
+[41] "d85"      "d86"      "d87"      "expersq" 
+  nr year agric black bus construc ent exper fin hisp poorhlth hours manuf married min nrthcen nrtheast occ1 occ2
+1 13 1980     0     0   1        0   0     1   0    0        0  2672     0       0   0       0        1    0    0
+2 13 1981     0     0   0        0   0     2   0    0        0  2320     0       0   0       0        1    0    0
+3 13 1982     0     0   1        0   0     3   0    0        0  2940     0       0   0       0        1    0    0
+4 13 1983     0     0   1        0   0     4   0    0        0  2960     0       0   0       0        1    0    0
+5 13 1984     0     0   0        0   0     5   0    0        0  3071     0       0   0       0        1    0    0
+6 13 1985     0     0   1        0   0     6   0    0        0  2864     0       0   0       0        1    0    1
+  occ3 occ4 occ5 occ6 occ7 occ8 occ9 per pro pub rur south educ tra trad union    lwage d81 d82 d83 d84 d85 d86 d87
+1    0    0    0    0    0    0    1   0   0   0   0     0   14   0    0     0 1.197540   0   0   0   0   0   0   0
+2    0    0    0    0    0    0    1   1   0   0   0     0   14   0    0     1 1.853060   1   0   0   0   0   0   0
+3    0    0    0    0    0    0    1   0   0   0   0     0   14   0    0     0 1.344462   0   1   0   0   0   0   0
+4    0    0    0    0    0    0    1   0   0   0   0     0   14   0    0     0 1.433213   0   0   1   0   0   0   0
+5    0    0    1    0    0    0    0   1   0   0   0     0   14   0    0     0 1.568125   0   0   0   1   0   0   0
+6    0    0    0    0    0    0    0   0   0   0   0     0   14   0    0     0 1.699891   0   0   0   0   1   0   0
+  expersq
+1       1
+2       4
+3       9
+4      16
+5      25
+6      36
+ [1] "_ExercicioConsolidado-v01.R" "_Modulo1_Resultados.pdf"     "_Modulo1_Resultados.txt"    
+ [4] "_Modulo1_Scripts-v01.R"      "_Modulo2_Resultados.pdf"     "_Modulo2_Resultados.txt"    
+ [7] "_Modulo2_Scripts-v01.R"      "_Modulo3_Resultados.txt"     "_Modulo3_Scripts-v01.R"     
+[10] "CEOSAL1.rda"                 "CEOSAL1.txt"                 "CRIME2-Kayo.dta"            
+[13] "CRIME2.rda"                  "ENDIV1.csv"                  "F1.csv"                     
+[16] "F1.rda"                      "GRUNFELD.rda"                "HPRICE1-Kayo.dta"           
+[19] "HPRICE2-Kayo.dta"            "MLB1.csv"                    "result.txt"                 
+[22] "SalMensal.csv"               "twoyear.csv"                 "WAGE1-Kayo.dta"             
+[25] "WAGEPAN-Kayo.dta"            "WAGEPAN.rda"                
+Pooling Model
+
+Call:
+plm(formula = lwage ~ educ + black + hisp + exper + expersq + 
+    married + union + d81 + d82 + d83 + d84 + d85 + d86 + d87, 
+    data = WAGEPANEL, model = "pooling")
+
+Balanced Panel: n = 545, T = 8, N = 4360
+
+Residuals:
+    Min.  1st Qu.   Median  3rd Qu.     Max. 
+-5.26573 -0.24838  0.03192  0.29475  2.52912 
+
+Coefficients:
+               Estimate  Std. Error t-value  Pr(>|t|)    
+(Intercept)  0.09205578  0.07827010  1.1761 0.2396076    
+educ         0.09134979  0.00523738 17.4419 < 2.2e-16 ***
+black       -0.13923421  0.02357956 -5.9049 3.799e-09 ***
+hisp         0.01601951  0.02079714  0.7703 0.4411788    
+exper        0.06723450  0.01369484  4.9095 9.467e-07 ***
+expersq     -0.00241170  0.00081995 -2.9413 0.0032860 ** 
+married      0.10825295  0.01568942  6.8997 5.962e-12 ***
+union        0.18246128  0.01715677 10.6349 < 2.2e-16 ***
+d81          0.05831999  0.03035363  1.9214 0.0547528 .  
+d82          0.06277442  0.03321407  1.8900 0.0588251 .  
+d83          0.06201174  0.03666013  1.6915 0.0908072 .  
+d84          0.09046719  0.04009071  2.2566 0.0240849 *  
+d85          0.10924630  0.04335248  2.5200 0.0117725 *  
+d86          0.14195959  0.04642297  3.0580 0.0022421 ** 
+d87          0.17383343  0.04943305  3.5165 0.0004417 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    1236.5
+Residual Sum of Squares: 1002.5
+R-Squared:      0.18928
+Adj. R-Squared: 0.18667
+F-statistic: 72.4588 on 14 and 4345 DF, p-value: < 2.22e-16
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = lwage ~ educ + black + hisp + exper + expersq + 
+    married + union + d81 + d82 + d83 + d84 + d85 + d86 + d87, 
+    data = WAGEPANEL, model = "random")
+
+Balanced Panel: n = 545, T = 8, N = 4360
+
+Effects:
+                 var std.dev share
+idiosyncratic 0.1232  0.3510 0.539
+individual    0.1054  0.3246 0.461
+theta: 0.6429
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-4.567162 -0.144197  0.022999  0.189966  1.551817 
+
+Coefficients:
+              Estimate Std. Error t-value  Pr(>|t|)    
+(Intercept)  0.0235864  0.1506683  0.1565 0.8756106    
+educ         0.0918763  0.0106597  8.6190 < 2.2e-16 ***
+black       -0.1393767  0.0477228 -2.9205 0.0035122 ** 
+hisp         0.0217317  0.0426063  0.5101 0.6100359    
+exper        0.1057545  0.0153668  6.8820 6.744e-12 ***
+expersq     -0.0047239  0.0006895 -6.8513 8.345e-12 ***
+married      0.0639860  0.0167742  3.8145 0.0001383 ***
+union        0.1061344  0.0178539  5.9446 2.988e-09 ***
+d81          0.0404620  0.0246946  1.6385 0.1013908    
+d82          0.0309212  0.0323416  0.9561 0.3390852    
+d83          0.0202806  0.0415820  0.4877 0.6257682    
+d84          0.0431187  0.0513163  0.8403 0.4008129    
+d85          0.0578155  0.0612323  0.9442 0.3451207    
+d86          0.0919476  0.0712293  1.2909 0.1968181    
+d87          0.1349289  0.0813135  1.6594 0.0971142 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    656.78
+Residual Sum of Squares: 538.16
+R-Squared:      0.18062
+Adj. R-Squared: 0.17798
+F-statistic: 68.4124 on 14 and 4345 DF, p-value: < 2.22e-16
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = lwage ~ educ + black + hisp + exper + expersq + 
+    married + union + d81 + d82 + d83 + d84 + d85 + d86 + d87, 
+    data = WAGEPANEL, model = "within")
+
+Balanced Panel: n = 545, T = 8, N = 4360
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-4.159280 -0.125273  0.011267  0.154869  1.492088 
+
+Coefficients: (1 dropped because of singularities)
+           Estimate  Std. Error t-value  Pr(>|t|)    
+exper    0.13214642  0.00982473 13.4504 < 2.2e-16 ***
+expersq -0.00518550  0.00070444 -7.3612 2.222e-13 ***
+married  0.04668036  0.01831044  2.5494   0.01083 *  
+union    0.08000186  0.01931031  4.1430 3.503e-05 ***
+d81      0.01904479  0.02036260  0.9353   0.34970    
+d82     -0.01132198  0.02022754 -0.5597   0.57570    
+d83     -0.04199552  0.02032053 -2.0667   0.03883 *  
+d84     -0.03847088  0.02031441 -1.8938   0.05833 .  
+d85     -0.04324982  0.02024576 -2.1362   0.03272 *  
+d86     -0.02738194  0.02038633 -1.3432   0.17930    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    572.05
+Residual Sum of Squares: 468.75
+R-Squared:      0.18058
+Adj. R-Squared: 0.061271
+F-statistic: 83.8515 on 10 and 3805 DF, p-value: < 2.22e-16
+
+	Lagrange Multiplier Test - (Breusch-Pagan) for balanced panels
+
+data:  lwage ~ educ + black + hisp + exper + expersq + married + union +  ...
+chisq = 3203.6, df = 1, p-value < 2.2e-16
+alternative hypothesis: significant effects
+
+
+	Hausman Test
+
+data:  lwage ~ educ + black + hisp + exper + expersq + married + union +  ...
+chisq = 31.707, df = 10, p-value = 0.000448
+alternative hypothesis: one model is inconsistent
+
+ [1] "CRIME2"      "CRIME2PANEL" "Exemplo17"   "Exemplo18"   "Exemplo18B"  "Exemplo19"   "Exemplo20"   "Exemplo21"  
+ [9] "Exemplo22"   "Grunfeld"    "WAGEPAN"     "WAGEPANEL"  
+Pooling Model
+
+Call:
+plm(formula = inv ~ value + capital, data = GRUNFELDPANEL, model = "pooling")
+
+Balanced Panel: n = 10, T = 20, N = 200
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-291.6757  -30.0137    5.3033   34.8293  369.4464 
+
+Coefficients:
+               Estimate  Std. Error t-value  Pr(>|t|)    
+(Intercept) -42.7143694   9.5116760 -4.4907 1.207e-05 ***
+value         0.1155622   0.0058357 19.8026 < 2.2e-16 ***
+capital       0.2306785   0.0254758  9.0548 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    9359900
+Residual Sum of Squares: 1755900
+R-Squared:      0.81241
+Adj. R-Squared: 0.8105
+F-statistic: 426.576 on 2 and 197 DF, p-value: < 2.22e-16
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = inv ~ value + capital, data = GRUNFELDPANEL, model = "random")
+
+Balanced Panel: n = 10, T = 20, N = 200
+
+Effects:
+                  var std.dev share
+idiosyncratic 2784.46   52.77 0.282
+individual    7089.80   84.20 0.718
+theta: 0.8612
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-177.6063  -19.7350    4.6851   19.5105  252.8743 
+
+Coefficients:
+              Estimate Std. Error t-value Pr(>|t|)    
+(Intercept) -57.834415  28.898935 -2.0013  0.04674 *  
+value         0.109781   0.010493 10.4627  < 2e-16 ***
+capital       0.308113   0.017180 17.9339  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    2381400
+Residual Sum of Squares: 548900
+R-Squared:      0.7695
+Adj. R-Squared: 0.76716
+F-statistic: 328.837 on 2 and 197 DF, p-value: < 2.22e-16
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = inv ~ value + capital, data = GRUNFELDPANEL, model = "within")
+
+Balanced Panel: n = 10, T = 20, N = 200
+
+Residuals:
+      Min.    1st Qu.     Median    3rd Qu.       Max. 
+-184.00857  -17.64316    0.56337   19.19222  250.70974 
+
+Coefficients:
+        Estimate Std. Error t-value  Pr(>|t|)    
+value   0.110124   0.011857  9.2879 < 2.2e-16 ***
+capital 0.310065   0.017355 17.8666 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    2244400
+Residual Sum of Squares: 523480
+R-Squared:      0.76676
+Adj. R-Squared: 0.75311
+F-statistic: 309.014 on 2 and 188 DF, p-value: < 2.22e-16
+
+	Lagrange Multiplier Test - (Breusch-Pagan) for balanced panels
+
+data:  inv ~ value + capital
+chisq = 798.16, df = 1, p-value < 2.2e-16
+alternative hypothesis: significant effects
+
+
+	Hausman Test
+
+data:  inv ~ value + capital
+chisq = 2.3304, df = 2, p-value = 0.3119
+alternative hypothesis: one model is inconsistent
+
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = inv ~ value + capital + factor(year), data = GRUNFELDPANEL, 
+    model = "random")
+
+Balanced Panel: n = 10, T = 20, N = 200
+
+Effects:
+                  var std.dev share
+idiosyncratic 2675.43   51.72 0.274
+individual    7095.25   84.23 0.726
+theta: 0.864
+
+Residuals:
+       Min.     1st Qu.      Median     3rd Qu.        Max. 
+-160.759401  -19.805349   -0.028228   19.194961  214.295364 
+
+Coefficients:
+                   Estimate Std. Error t-value  Pr(>|t|)    
+(Intercept)      -29.828275  32.380484 -0.9212  0.358203    
+value              0.113779   0.011759  9.6763 < 2.2e-16 ***
+capital            0.354336   0.022594 15.6826 < 2.2e-16 ***
+factor(year)1936 -17.690058  23.612087 -0.7492  0.454729    
+factor(year)1937 -38.006448  24.356323 -1.5604  0.120433    
+factor(year)1938 -38.400547  23.303431 -1.6478  0.101148    
+factor(year)1939 -67.669031  23.605147 -2.8667  0.004648 ** 
+factor(year)1940 -42.210436  23.716150 -1.7798  0.076812 .  
+factor(year)1941 -16.896674  23.640596 -0.7147  0.475711    
+factor(year)1942 -19.950610  23.442180 -0.8511  0.395882    
+factor(year)1943 -41.303361  23.564907 -1.7527  0.081367 .  
+factor(year)1944 -41.301975  23.603031 -1.7499  0.081866 .  
+factor(year)1945 -53.418089  23.807547 -2.2437  0.026081 *  
+factor(year)1946 -28.601243  23.973397 -1.1930  0.234441    
+factor(year)1947 -37.647517  23.832869 -1.5796  0.115963    
+factor(year)1948 -41.944013  24.029174 -1.7455  0.082615 .  
+factor(year)1949 -71.515032  24.236975 -2.9507  0.003598 ** 
+factor(year)1950 -73.609655  24.379280 -3.0194  0.002906 ** 
+factor(year)1951 -59.205876  24.754226 -2.3917  0.017810 *  
+factor(year)1952 -60.963457  25.209460 -2.4183  0.016602 *  
+factor(year)1953 -62.886188  26.252610 -2.3954  0.017638 *  
+factor(year)1954 -88.564196  26.819791 -3.3022  0.001159 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    2376000
+Residual Sum of Squares: 479720
+R-Squared:      0.7981
+Adj. R-Squared: 0.77428
+F-statistic: 33.506 on 21 and 178 DF, p-value: < 2.22e-16
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = inv ~ value + capital + factor(year), data = GRUNFELDPANEL, 
+    model = "within")
+
+Balanced Panel: n = 10, T = 20, N = 200
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-162.6094  -19.4710   -1.2669   19.1277  211.8420 
+
+Coefficients:
+                   Estimate Std. Error t-value  Pr(>|t|)    
+value              0.117716   0.013751  8.5604 6.653e-15 ***
+capital            0.357916   0.022719 15.7540 < 2.2e-16 ***
+factor(year)1936 -19.197405  23.675862 -0.8108 0.4185963    
+factor(year)1937 -40.690009  24.695410 -1.6477 0.1012774    
+factor(year)1938 -39.226404  23.235936 -1.6882 0.0932215 .  
+factor(year)1939 -69.470288  23.656074 -2.9367 0.0037802 ** 
+factor(year)1940 -44.235085  23.809795 -1.8579 0.0649297 .  
+factor(year)1941 -18.804463  23.694000 -0.7936 0.4285190    
+factor(year)1942 -21.139792  23.381630 -0.9041 0.3672189    
+factor(year)1943 -42.977623  23.552866 -1.8247 0.0698076 .  
+factor(year)1944 -43.098772  23.610197 -1.8254 0.0697014 .  
+factor(year)1945 -55.683040  23.895615 -2.3303 0.0209739 *  
+factor(year)1946 -31.169284  24.115984 -1.2925 0.1979574    
+factor(year)1947 -39.392242  23.783682 -1.6563 0.0995223 .  
+factor(year)1948 -43.716514  23.969654 -1.8238 0.0699446 .  
+factor(year)1949 -73.495099  24.182919 -3.0391 0.0027500 ** 
+factor(year)1950 -75.896112  24.345526 -3.1175 0.0021445 ** 
+factor(year)1951 -62.480912  24.864254 -2.5129 0.0129115 *  
+factor(year)1952 -64.632341  25.349502 -2.5496 0.0116721 *  
+factor(year)1953 -67.717966  26.611085 -2.5447 0.0118315 *  
+factor(year)1954 -93.526221  27.107864 -3.4502 0.0007076 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    2244400
+Residual Sum of Squares: 452150
+R-Squared:      0.79854
+Adj. R-Squared: 0.76278
+F-statistic: 31.8989 on 21 and 169 DF, p-value: < 2.22e-16
+
+	Lagrange Multiplier Test - (Breusch-Pagan) for balanced panels
+
+data:  inv ~ value + capital + factor(year)
+chisq = 816.16, df = 1, p-value < 2.2e-16
+alternative hypothesis: significant effects
+
+
+	Hausman Test
+
+data:  inv ~ value + capital + factor(year)
+chisq = 6.5733, df = 21, p-value = 0.9988
+alternative hypothesis: one model is inconsistent
+

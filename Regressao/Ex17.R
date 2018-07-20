@@ -1,0 +1,8 @@
+setwd("D:/Users/25052288840/Downloads/FIA_data_mining/Regressao/")
+load("Aula 10/CRIME2.rda")
+Ex17 <- lm(formula = crmrte ~ unem, data = subset(CRIME2, year == 87))
+summary(Ex17)
+Ex18 <- lm(formula = crmrte ~ d87 + unem, data= CRIME2)
+summary(Ex18)
+Ex18b <- lm(formula = lcrimes ~ unem, data= CRIME2)
+summary(Ex18b)
