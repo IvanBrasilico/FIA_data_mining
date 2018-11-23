@@ -1,0 +1,21 @@
+install.packages("C50")
+library(C50)
+data(churn)
+churn_model <- C5.0(churnTrain[-20], churnTrain$churn)
+churn_pred_train <- predict(churn_model, churnTrain)
+churn_pred_test <- predict(churn_model, churnTest)
+churn_model10 <- C5.0(churnTrain[-20], churnTrain$churn, trials=10)
+churn_pred_train10 <- predict(churn_model10, churnTrain)
+churn_pred_test10 <- predict(churn_model10, churnTest)
+install.packages("RWeka")
+library(RWeka)
+churn_modelRip <- JRip(churnTrain[-20], churnTrain$churn)
+churn_pred_rip <- predict(churn_modelRip, churnTest)
+
+library(gmodels)
+
+CrossTable(churnTrain$churn, churn_pred_train, 	prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE, 	dnn = c("actual churn", "predict churn"))
+CrossTable(churnTrain$churn, churn_pred_train10, 	prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE, 	dnn = c("actual churn", "predict churn"))
+
+CrossTable(churnTest$churn, churn_pred_test, 	prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE, 	dnn = c("actual churn", "predict churn"))
+CrossTable(churnTest$churn, churn_pred_test10, 	prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE, 	dnn = c("actual churn", "predict churn"))

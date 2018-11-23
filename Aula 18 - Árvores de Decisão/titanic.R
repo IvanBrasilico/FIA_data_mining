@@ -1,0 +1,12 @@
+setwd("D:\\Users\\25052288840\\Downloads\\FIA_data_mining\\Aula 18 - Árvores de Decisão")
+
+titanic <- read.csv2("titanic.csv", stringsAsFactors=FALSE)
+str(titanic)
+titanic$survived <- as.factor(titanic$survived)
+titanic$sex <- as.factor(titanic$sex)
+titanic$embarked <- as.factor(titanic$embarked)
+titanic$pclass <-as.factor(titanic$pclass)
+str(titanic)
+head(titanic)
+mod_titanic <- C5.0(survived ~ pclass+sex+age+fare+sibsp+parch, data=titanic)
+summary(mod_titanic)
